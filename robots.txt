@@ -1,0 +1,9 @@
+# fitforwardmiami.com
+# Everything here is public marketing copy — nothing is gated, so nothing is
+# disallowed. AI assistants are allowed deliberately: people ask them for local
+# coaches, and the answer is only as good as what they are permitted to read.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.fitforwardmiami.com/sitemap.xml

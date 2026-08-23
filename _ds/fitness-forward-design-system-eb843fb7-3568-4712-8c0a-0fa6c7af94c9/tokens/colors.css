@@ -1,0 +1,99 @@
+/* ============================================================
+   Fitness Forward — Color Tokens
+   ------------------------------------------------------------
+   A high-energy, high-contrast palette. Black ink anchors a
+   loud trio of brand pops (Volt yellow, Grape purple, Punch
+   coral) softened by a lavender Mist family. Use pops with
+   confidence and restraint — large fields of black or cream,
+   punched by one saturated accent at a time.
+   ============================================================ */
+
+:root {
+  /* ---- Brand core (from the official swatch sheet) ---- */
+  --ff-volt:        #fbee56;  /* primary pop — sunburst yellow      */
+  --ff-ink:         #000000;  /* true black — primary ink & surface */
+  --ff-punch:       #e16567;  /* coral red — energy / alert accent  */
+  --ff-mist:        #eeddec;  /* palest lavender — soft surface     */
+  --ff-orchid:      #ba95c5;  /* mid purple — secondary accent      */
+  --ff-grape:       #7951a0;  /* deep purple — rich brand accent    */
+
+  /* ---- Volt (yellow) ramp ---- */
+  --ff-volt-100:    #fffce3;
+  --ff-volt-200:    #fef8b8;
+  --ff-volt-300:    #fdf389;
+  --ff-volt-400:    #fbee56;  /* = --ff-volt */
+  --ff-volt-500:    #ecdb2e;
+  --ff-volt-600:    #c9b911;
+  --ff-volt-700:    #978a0c;
+
+  /* ---- Grape (purple) ramp ---- */
+  --ff-grape-100:   #f1eaf5;
+  --ff-grape-200:   #ddccea;
+  --ff-grape-300:   #c5aad8;
+  --ff-grape-400:   #ba95c5;  /* = --ff-orchid */
+  --ff-grape-500:   #9a6fb4;
+  --ff-grape-600:   #7951a0;  /* = --ff-grape  */
+  --ff-grape-700:   #5b3c79;
+  --ff-grape-800:   #3d2851;
+
+  /* ---- Punch (coral) ramp ---- */
+  --ff-punch-100:   #fdeceb;
+  --ff-punch-200:   #f6c7c7;
+  --ff-punch-300:   #ed9a9b;
+  --ff-punch-400:   #e16567;  /* = --ff-punch */
+  --ff-punch-500:   #d2474a;
+  --ff-punch-600:   #b33033;
+
+  /* ---- Neutrals — warm-tinted off-blacks & creams ---- */
+  --ff-black:       #0a0a0a;
+  --ff-900:         #141414;
+  --ff-800:         #1f1d22;  /* faint plum cast */
+  --ff-700:         #34303a;
+  --ff-600:         #56505f;
+  --ff-500:         #7c7686;
+  --ff-400:         #a9a3b1;
+  --ff-300:         #cfc9d4;
+  --ff-200:         #e7e2ea;
+  --ff-150:         #efeaf1;
+  --ff-100:         #f6f2f6;
+  --ff-cream:       #faf6f1;  /* warm paper */
+  --ff-white:       #ffffff;
+
+  /* ---- Semantic: surfaces ---- */
+  --surface-page:        var(--ff-cream);
+  --surface-card:        var(--ff-white);
+  --surface-raised:      var(--ff-white);
+  --surface-sunken:      var(--ff-100);
+  --surface-inverse:     var(--ff-ink);
+  --surface-mist:        var(--ff-mist);
+  --surface-volt:        var(--ff-volt);
+  --surface-grape:       var(--ff-grape);
+
+  /* ---- Semantic: text ---- */
+  --text-strong:         var(--ff-ink);
+  --text-body:           var(--ff-800);
+  --text-muted:          var(--ff-500);
+  --text-faint:          var(--ff-400);
+  --text-on-ink:         var(--ff-white);
+  --text-on-volt:        var(--ff-ink);
+  --text-on-grape:       var(--ff-white);
+  --text-link:           var(--ff-grape-600);
+
+  /* ---- Semantic: borders & lines ---- */
+  --border-hairline:     var(--ff-200);
+  --border-default:      var(--ff-300);
+  --border-strong:       var(--ff-ink);
+
+  /* ---- Semantic: interactive accent ---- */
+  --accent:              var(--ff-grape-600);
+  --accent-hover:        var(--ff-grape-700);
+  --accent-contrast:     var(--ff-white);
+  --focus-ring:          var(--ff-grape-500);
+
+  /* ---- Status ---- */
+  --status-go:           #2f9e6f;  /* progress / success         */
+  --status-go-soft:      #e2f3eb;
+  --status-warn:         var(--ff-volt-600);
+  --status-stop:         var(--ff-punch-500);
+  --status-stop-soft:    var(--ff-punch-100);
+}

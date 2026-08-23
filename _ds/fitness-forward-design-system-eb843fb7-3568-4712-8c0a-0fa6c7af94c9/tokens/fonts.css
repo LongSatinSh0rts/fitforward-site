@@ -1,0 +1,15 @@
+/* ============================================================
+   Fitness Forward — Webfonts
+   ------------------------------------------------------------
+   The brand wordmark is custom liquid lettering (see assets/).
+   Supporting type pairs an expressive forward-leaning display
+   (Syne) with a warm, legible grotesque (Hanken Grotesk) and a
+   retro-technical mono (Space Mono) for stats, timers & labels.
+
+   NOTE: Fonts are loaded from the Google Fonts CDN rather than
+   self-hosted binaries. See readme.md "Font substitution" — swap
+   these @import lines for self-hosted @font-face if the brand
+   provides licensed files.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Bagel+Fat+One&display=swap');

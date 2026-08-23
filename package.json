@@ -1,0 +1,17 @@
+{
+  "name": "fitforwardmiami",
+  "private": true,
+  "version": "1.0.0",
+  "description": "fitforwardmiami.com — Fitness Forward by CJR",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs && node prerender.mjs && node verify.mjs",
+    "serve": "node serve.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "jsdom": "^30.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

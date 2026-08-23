@@ -1,0 +1,45 @@
+/* ============================================================
+   Fitness Forward — Spacing, Radius, Layout Tokens
+   ------------------------------------------------------------
+   8px base grid. Radii are generous and pill-friendly to echo
+   the rounded, liquid logo forms — buttons and chips are fully
+   round; cards use a soft 20–28px radius.
+   ============================================================ */
+
+:root {
+  /* ---- Spacing scale (8px base) ---- */
+  --space-0:   0;
+  --space-1:   0.25rem;  /* 4  */
+  --space-2:   0.5rem;   /* 8  */
+  --space-3:   0.75rem;  /* 12 */
+  --space-4:   1rem;     /* 16 */
+  --space-5:   1.5rem;   /* 24 */
+  --space-6:   2rem;     /* 32 */
+  --space-7:   2.5rem;   /* 40 */
+  --space-8:   3rem;     /* 48 */
+  --space-9:   4rem;     /* 64 */
+  --space-10:  5rem;     /* 80 */
+  --space-11:  6rem;     /* 96 */
+  --space-12:  8rem;     /* 128 */
+
+  /* ---- Radius — soft & pill-forward ---- */
+  --radius-xs:    6px;
+  --radius-sm:    10px;
+  --radius-md:    16px;
+  --radius-lg:    22px;
+  --radius-xl:    28px;
+  --radius-2xl:   40px;
+  --radius-pill:  999px;
+  --radius-card:  var(--radius-lg);
+
+  /* ---- Borders ---- */
+  --border-width:       1.5px;
+  --border-width-bold:  2.5px;
+
+  /* ---- Layout ---- */
+  --container-max:   1200px;
+  --container-wide:  1400px;
+  --container-text:  680px;
+  --gutter:          clamp(1.25rem, 4vw, 4rem); /* @kind spacing */
+  --section-y:       clamp(3.5rem, 8vw, 8rem);  /* @kind spacing */
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitness Forward by CJR — Miami</title>
+<meta name="description" content="Multidisciplinary performance coaching in Miami. Training, nutrition, recovery and performance fused into one blueprint — corrective, elite, and adaptive. Book a free call.">
+<link rel="canonical" href="https://www.fitforwardmiami.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fitness Forward by CJR — Miami">
+<meta property="og:description" content="Go beyond reason. Kick impossible to the curb. Elite human performance coaching in Miami.">
+<meta property="og:url" content="https://www.fitforwardmiami.com/">
+<meta property="og:image" content="https://www.fitforwardmiami.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fitness Forward by CJR — Miami">
+<meta name="twitter:description" content="Go beyond reason. Kick impossible to the curb. Elite human performance coaching in Miami.">
+<meta name="twitter:image" content="https://www.fitforwardmiami.com/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "additionalType": "https://schema.org/ExerciseGym",
+  "name": "Fitness Forward by CJR",
+  "description": "Multidisciplinary performance coaching in Miami. Training, nutrition, recovery and performance fused into one blueprint.",
+  "url": "https://www.fitforwardmiami.com/",
+  "email": "christopher@fitforwardmiami.com",
+  "telephone": "+1-347-400-2088",
+  "image": "https://www.fitforwardmiami.com/og-image.jpg",
+  "priceRange": "$85-$135",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 25.7941592, "longitude": -80.187324 },
+  "areaServed": [
+    { "@type": "Place", "name": "Miami" },
+    { "@type": "Place", "name": "Midtown Miami" },
+    { "@type": "Place", "name": "Edgewater" },
+    { "@type": "Place", "name": "Miami Beach" }
+  ],
+  "founder": { "@type": "Person", "name": "Christopher J. Rosado", "jobTitle": "Human Performance Architect" },
+  "sameAs": ["https://www.instagram.com/fitnessforwardcjr/"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  }],
+  "makesOffer": [
+    { "@type": "Offer", "name": "4-session combo", "price": "135", "priceCurrency": "USD", "description": "Per 60-minute session." },
+    { "@type": "Offer", "name": "8-session combo", "price": "120", "priceCurrency": "USD", "description": "Per 60-minute session." },
+    { "@type": "Offer", "name": "12-session combo", "price": "105", "priceCurrency": "USD", "description": "Per 60-minute session." },
+    { "@type": "Offer", "name": "Programming only", "price": "85", "priceCurrency": "USD", "description": "Per month, delivered through Hub Fit." }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="_ds/fitness-forward-design-system-eb843fb7-3568-4712-8c0a-0fa6c7af94c9/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Bagel+Fat+One&family=Shrikhand&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.min.js"></script>
+<script src="_ds/fitness-forward-design-system-eb843fb7-3568-4712-8c0a-0fa6c7af94c9/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<script src="logos.js"></script>
+<script src="photos.js"></script>
+
+<style>
+  body { margin: 0; background: var(--surface-page); }
+  * { -webkit-font-smoothing: antialiased; }
+  image-slot { border-radius: 0; }
+  #root button { white-space: nowrap; }
+
+  :root { --font-groovy: 'Fredoka', cursive; }
+  /* Brand display type — echoes the liquid "Fitness Forward" wordmark. */
+  .ff-h { font-family: var(--font-groovy) !important; line-height: 1.18 !important; letter-spacing: 0.005em !important; padding-bottom: 0.1em; }
+  /* Hero tagline keeps the original liquid Bagel Fat One face. */
+  .ff-bagel { font-family: 'Bagel Fat One', cursive !important; letter-spacing: -0.04em !important; }
+
+  @keyframes ffReveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+  .ff-reveal { animation: ffReveal 600ms var(--ease-out); }
+  @media (prefers-reduced-motion: reduce) { .ff-reveal { animation: none !important; } }
+
+  .story-arrow { background: none; border: none; padding: 8px 10px; min-width: 44px; min-height: 44px; cursor: pointer; line-height: 0; transition: transform 160ms var(--ease-spring); display: inline-flex; align-items: center; justify-content: center; }
+  .story-arrow:hover { transform: translateY(-2px); }
+  .story-arrow:active { transform: translateY(1px) scale(0.97); }
+
+  /* Keyboard focus — visible everywhere, invisible to mouse users. */
+  :focus { outline: none; }
+  :focus-visible {
+    outline: 3px solid var(--ff-grape-600);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  #stories :focus-visible, footer :focus-visible, .nav-mobile :focus-visible {
+    outline-color: var(--ff-volt);
+  }
+
+  .merch-grid { }
+  @media (max-width: 760px) { .merch-grid { grid-template-columns: 1fr !important; } }
+  @media (max-width: 700px) { .prog-grid { grid-template-columns: 1fr !important; } }
+  .merch-tile { transition: transform 200ms var(--ease-spring); }
+  .merch-tile:hover { transform: translateY(-4px); }
+  .merch-notify { transition: transform 160ms var(--ease-spring), box-shadow 160ms var(--ease-out); }
+  .merch-notify:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ff-ink); }
+  .merch-notify:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ff-ink); }
+
+  @media (max-width: 900px) {
+    .booking-card { grid-template-columns: 1fr !important; }
+    .book-dt { grid-template-columns: 1fr !important; }
+    .book-slots { border-left: none !important; padding-left: 0 !important; border-top: 1.5px solid var(--ff-150); padding-top: 18px !important; }
+  }
+  @media (max-width: 860px) {
+    .hero-grid, .coach-grid, .news-grid, .book-extras, .philo-grid { grid-template-columns: 1fr !important; }
+    .footer-grid { grid-template-columns: 1fr 1fr !important; }
+    .site-nav { display: none !important; }
+    .nav-burger { display: inline-flex !important; }
+    .nav-mobile { display: flex !important; }
+  }
+  @media (max-width: 540px) {
+    .book-form { grid-template-columns: 1fr !important; }
+    .book-steplabel { display: none; }
+    .footer-grid { grid-template-columns: 1fr !important; }
+    .disc-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+<!-- Netlify Forms: hidden static form so Netlify's deploy scanner registers "free-week".
+     The real (React) email box posts into this. Submissions appear in Netlify → Forms. -->
+<form name="free-week" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="free-week" />
+  <input type="text" name="bot-field" />
+  <input type="email" name="email" />
+</form>
+<template id="__bundler_thumbnail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+<rect width="400" height="300" fill="#141414"/>
+<rect x="120" y="95" width="160" height="110" rx="20" fill="#FBEE56" stroke="#141414" stroke-width="4"/>
+<text x="200" y="165" font-family="Syne, sans-serif" font-size="64" font-weight="800" fill="#141414" text-anchor="middle">FF</text>
+</svg>
+</template>
+<div id="root"><div style="max-width:1100px;margin:0 auto;padding:56px 24px;font-family:system-ui,sans-serif;color:#141414">
+  <p style="font-family:ui-monospace,monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7951a0;margin:0 0 14px">Fitness Forward by CJR &middot; Miami</p>
+  <h1 style="font-size:44px;line-height:1.06;font-weight:800;letter-spacing:-.03em;margin:0 0 18px">Go beyond reason. Kick impossible to the curb.</h1>
+  <p style="font-size:19px;line-height:1.55;max-width:620px;margin:0 0 34px">You are one entity. Train like it. Strength, nutrition and recovery engineered into a single blueprint &ndash; for the everyday and elite alike.</p>
+  <h2 style="font-size:26px;font-weight:800;margin:0 0 10px">Four disciplines: One blueprint</h2>
+  <p style="font-size:16px;line-height:1.6;max-width:620px;margin:0 0 30px">Corrective Exercise Specialist. Certified Nutritional Counselor. Performance Enhancement Specialist. Adaptive &amp; Inclusive Trainer.</p>
+  <h2 style="font-size:26px;font-weight:800;margin:0 0 10px">Coaching &amp; rates</h2>
+  <ul style="font-size:16px;line-height:1.9;margin:0 0 12px;padding-left:20px">
+    <li>Discovery call &ndash; free, 30 minutes</li>
+    <li>4&#8209;session combo &ndash; $135 / 60 min</li>
+    <li>8&#8209;session combo &ndash; $120 / 60 min</li>
+    <li>12&#8209;session combo &ndash; $105 / 60 min</li>
+    <li>Programming only &ndash; $85 / month via Hub Fit</li>
+  </ul>
+  <p style="font-size:15px;line-height:1.6;color:#5b5563;margin:0 0 30px">Outcall &ndash; your coach drives to you, instead of meeting at the Miami Strong facility in Edgewater. +$45 per session.</p>
+  <h2 style="font-size:26px;font-weight:800;margin:0 0 10px">Christopher Rosado</h2>
+  <p style="font-size:16px;line-height:1.6;max-width:620px;margin:0 0 30px">I built Fitness Forward to train the whole entity. Education, culinary work, years of coaching &ndash; and an element of play &ndash; aimed at chronic pain and the plateaus that outlast it.</p>
+  <p style="font-size:16px;line-height:1.8;margin:0">
+    <a href="mailto:Christopher@fitforwardmiami.com" style="color:#7951a0;font-weight:700">Christopher@fitforwardmiami.com</a><br>
+    <a href="tel:+13474002088" style="color:#7951a0;font-weight:700">347-400-2088</a><br>
+    <a href="https://www.instagram.com/fitnessforwardcjr/" style="color:#7951a0;font-weight:700">@fitnessforwardcjr</a>
+  </p>
+</div></div>
+
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="kit.jsx"></script>
+<script type="text/babel" src="Sections.jsx"></script>
+<script type="text/babel" src="Sections2.jsx"></script>
+<script type="text/babel" src="Sections3.jsx"></script>
+
+<script type="text/babel" src="app.jsx"></script>
+
+
+<!-- Lunacal element-click (popup) embed — opens the matching calendar in a modal -->
+<script type="text/javascript">
+  (function(L,U,N){let p=(a,ar)=>a.q.push(ar),d=L.document;L.Lunacal=L.Lunacal||function(){let lun=L.Lunacal,ar=arguments;if(!lun.loaded){lun.ns={};lun.q=lun.q||[];d.head.appendChild(d.createElement("script")).src=U;lun.loaded=!0}if(ar[0]===N){const api=function(){p(api,arguments)};const ns=ar[1];api.q=api.q||[];if(typeof ns==="string"){lun.ns[ns]=lun.ns[ns]||api;p(lun.ns[ns],ar);p(lun,["initNamespace",ns])}else p(lun,ar);return}p(lun,ar)};if(!L.Cal)L.Cal=L.Lunacal})(window,"https://app.lunacal.ai/embed/embed.js","init");
+
+  Lunacal.config = Lunacal.config || {};
+  Lunacal.config.forwardQueryParams = true;
+
+  var LUNACAL_UI = {"theme":"dark","styles":{"branding":{}},"hideEventTypeDetails":false,"layout":"","cssVarsPerTheme":{"light":{"theme-border":"#28282B","theme-background-primary":"#8f51ea","theme-background-secondary":"#0044ff","theme-background-card":"#010101","theme-background-base":"#010101","theme-text-primary":"#ffffff","theme-text-secondary":"#ffffff","theme-text-card":"#ffffff","theme-text-base":"#ffffff","theme-rounded-base":"20px","theme-rounded-calendar":" 20px","theme-rounded-timeslot":"8px","theme-rounded-day":"6px","theme-rounded-button":"4px","theme-shadow-calendar":"0px 0px 0px 0px #D04F99","theme-shadow-button":"0px 0px 0px 0px #D1519A88","theme-shadow-timeslot":"0px 0px 0px 0px #000000","theme-font-family":"Outfit"},"dark":{"theme-border":"#28282B","theme-background-primary":"#8f51ea","theme-background-secondary":"#0044ff","theme-background-card":"#010101","theme-background-base":"#010101","theme-text-primary":"#ffffff","theme-text-secondary":"#ffffff","theme-text-card":"#ffffff","theme-text-base":"#ffffff","theme-rounded-base":"20px","theme-rounded-calendar":" 20px","theme-rounded-timeslot":"8px","theme-rounded-day":"6px","theme-rounded-button":"4px","theme-shadow-calendar":"0px 0px 0px 0px #D04F99","theme-shadow-button":"0px 0px 0px 0px #D1519A88","theme-shadow-timeslot":"0px 0px 0px 0px #000000","theme-font-family":"Outfit"}},"displayedContent":{"image":true,"name":true,"designation":true,"description":true,"eventName":true,"highlightBar":false},"background":null,"stylePreset":"midnight"};
+
+  [["discovery-call","fitnessforward/discovery-call"],
+   ["4-session-combo","fitnessforward/4-session-combo"],
+   ["8-session-combo","fitnessforward/8-session-combo"],
+   ["12-session-combo","fitnessforward/12-session-combo"]].forEach(function(pair){
+    var ns = pair[0], cal = pair[1];
+    Lunacal("init", ns, { origin: "https://app.lunacal.ai" });
+    Lunacal.ns[ns]("preload", { calLink: cal, type: "modal", options: { prerenderIframe: true } });
+    Lunacal.ns[ns]("ui", LUNACAL_UI);
+  });
+
+  // Shared data-attributes that trigger each popup on click (DS Button forwards ...rest).
+  window.LUNACAL = {
+    discovery: { 'data-cal-namespace': 'discovery-call', 'data-cal-link': 'fitnessforward/discovery-call', 'data-cal-config': '{"layout":""}' },
+  };
+
+  // HubSpot lead capture — paste the two IDs from HubSpot → Marketing → Forms
+  // (Share → Embed code: portalId and formId). Leave blank to skip HubSpot and
+  // keep capturing in Netlify Forms only.
+  window.HUBSPOT = { portalId: '246912476', formGuid: 'acacb956-f020-42b5-94b6-a8bf9bbc9634', region: 'na2' };
+</script>
+
+<!-- Paste as plain text: any text pasted into an editable spot drops its source
+     font/color/size and inherits the site's styling. -->
+<script>
+  document.addEventListener('paste', function (e) {
+    var node = e.target;
+    var ce = node && node.closest && node.closest('[contenteditable=""],[contenteditable="true"]');
+    if (!ce) return;
+    e.preventDefault();
+    var text = ((e.clipboardData || window.clipboardData).getData('text/plain') || '').replace(/\r\n?/g, '\n');
+    var sel = window.getSelection();
+    if (sel && sel.rangeCount) {
+      var range = sel.getRangeAt(0);
+      range.deleteContents();
+      range.insertNode(document.createTextNode(text));
+      range.collapse(false);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    } else {
+      document.execCommand('insertText', false, text);
+    }
+  }, true);
+</script>
+</body>
+</html>

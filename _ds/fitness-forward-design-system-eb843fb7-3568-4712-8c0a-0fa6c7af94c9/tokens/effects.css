@@ -1,0 +1,40 @@
+/* ============================================================
+   Fitness Forward — Effects: shadows, motion, focus
+   ------------------------------------------------------------
+   Shadows are soft and warm-tinted (plum-black), never harsh.
+   A signature "hard" offset shadow gives cards & buttons a
+   playful sticker / cut-out feel that suits the groovy brand.
+   Motion is springy and confident — short, slightly bouncy
+   easing. Forward momentum, never sluggish.
+   ============================================================ */
+
+:root {
+  /* ---- Soft elevation ---- */
+  --shadow-xs:   0 1px 2px rgba(31, 18, 38, 0.06);
+  --shadow-sm:   0 2px 8px rgba(31, 18, 38, 0.08);
+  --shadow-md:   0 8px 24px rgba(31, 18, 38, 0.10);
+  --shadow-lg:   0 18px 48px rgba(31, 18, 38, 0.14);
+  --shadow-xl:   0 32px 70px rgba(31, 18, 38, 0.18);
+
+  /* ---- Signature hard "sticker" offset (cut-out look) ---- */
+  --shadow-hard:        4px 4px 0 0 var(--ff-ink);
+  --shadow-hard-lg:     7px 7px 0 0 var(--ff-ink);
+  --shadow-hard-grape:  6px 6px 0 0 var(--ff-grape-600);
+  --shadow-hard-volt:   6px 6px 0 0 var(--ff-volt-500);
+
+  /* ---- Focus ---- */
+  --focus-ring-width:  3px;
+  --focus-ring-color:  var(--ff-grape-500);
+  --focus-ring:        0 0 0 var(--focus-ring-width) rgba(154, 111, 180, 0.45);
+
+  /* ---- Motion ---- */
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);  /* @kind other */
+  --ease-out:      cubic-bezier(0.22, 1, 0.36, 1);     /* @kind other */
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);     /* @kind other */
+  --dur-fast:      120ms; /* @kind other */
+  --dur-base:      200ms; /* @kind other */
+  --dur-slow:      360ms; /* @kind other */
+
+  /* ---- Misc ---- */
+  --ring-offset:   2px;
+}

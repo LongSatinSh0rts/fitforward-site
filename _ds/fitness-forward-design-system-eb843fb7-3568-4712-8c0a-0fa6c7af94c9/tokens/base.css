@@ -1,0 +1,97 @@
+/* ============================================================
+   Fitness Forward — Base layer
+   Element defaults & a small set of brand utility classes.
+   Tokens are defined in colors/typography/spacing/effects.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-body);
+  background: var(--surface-page);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-strong);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-tight);
+  margin: 0 0 0.5em;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-extra); letter-spacing: var(--ls-display); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+
+p { margin: 0 0 1em; text-wrap: pretty; }
+
+a { color: var(--text-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+strong, b { font-weight: var(--fw-bold); }
+
+::selection { background: var(--ff-volt); color: var(--ff-ink); }
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-xs);
+}
+
+/* ---- Brand utilities ---- */
+.ff-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-kicker);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-kicker);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.ff-display {
+  font-family: var(--font-display);
+  font-weight: var(--fw-extra);
+  letter-spacing: var(--ls-display);
+  line-height: var(--lh-tight);
+  color: var(--text-strong);
+}
+
+.ff-mono { font-family: var(--font-mono); }
+
+/* Liquid underline accent — a fat highlighter swipe behind text */
+.ff-highlight {
+  background: linear-gradient(var(--ff-volt), var(--ff-volt)) no-repeat;
+  background-size: 100% 0.42em;
+  background-position: 0 88%;
+  padding: 0 0.06em;
+}
+
+.ff-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ---- Button interaction states (component: Button) ---- */
+.ff-button:not(:disabled):hover { filter: brightness(0.94); }
+.ff-button:not(:disabled):active { transform: translateY(1px) scale(0.985); }
+.ff-button[data-variant="ghost"]:not(:disabled):hover { filter: none; background: var(--ff-100); }
+.ff-button[data-variant="secondary"]:not(:disabled):hover { filter: none; background: var(--ff-ink); color: #fff; }
+.ff-button[data-variant="sticker"]:not(:disabled):hover { filter: none; transform: translate(-2px, -2px); box-shadow: var(--shadow-hard-lg); }
+.ff-button[data-variant="sticker"]:not(:disabled):active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 0 var(--ff-ink); }
+
+/* ---- Input focus (component: Input) ---- */
+.ff-input:focus { border-color: var(--ff-grape-500) !important; box-shadow: var(--focus-ring); }
+.ff-input::placeholder { color: var(--ff-400); }

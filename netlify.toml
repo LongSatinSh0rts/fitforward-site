@@ -1,0 +1,30 @@
+# Netlify build for fitforwardmiami.com.
+#
+# Before this file the deploy was the source folder itself, which is why the
+# browser was transpiling JSX on every visit: the build step existed but nothing
+# ran it. Netlify now runs it and publishes dist/.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+# Hashed/derived assets are safe to cache hard. index.html must not be, or a
+# deploy takes a day to reach anyone.
+[[headers]]
+  for = "/assets/prerender/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

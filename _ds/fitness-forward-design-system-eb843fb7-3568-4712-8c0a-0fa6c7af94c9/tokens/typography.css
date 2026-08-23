@@ -1,0 +1,72 @@
+/* ============================================================
+   Fitness Forward — Typography Tokens
+   ------------------------------------------------------------
+   Display (Syne):       hero statements, big numbers, momentum
+   Text / UI (Hanken):   body, buttons, labels, everything legible
+   Mono (Space Mono):    stats, timers, kickers, metadata
+
+   House rules:
+   - Display is set TIGHT (-0.02 to -0.04em) and heavy (700/800).
+   - Kickers / eyebrows are mono, UPPERCASE, wide-tracked.
+   - Body never below 16px on screen; 24px floor on slides.
+   ============================================================ */
+
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Syne', 'Hanken Grotesk', system-ui, sans-serif;
+  --font-text:    'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono:    'Space Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --font-maximal: 'Bagel Fat One', 'Syne', system-ui, sans-serif;
+
+  /* ---- Weights ---- */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+  --fw-extra:     800; /* @kind font */
+
+  /* ---- Fluid display scale (clamp: min, vw, max) ---- */
+  --fs-display-1: clamp(3rem, 1.4rem + 7vw, 7rem);     /* @kind spacing */
+  --fs-display-2: clamp(2.5rem, 1.4rem + 5vw, 5rem);   /* @kind spacing */
+  --fs-display-3: clamp(2rem, 1.3rem + 3.2vw, 3.5rem); /* @kind spacing */
+
+  /* ---- Static type scale ---- */
+  --fs-h1:        2.5rem;    /* @kind font */
+  --fs-h2:        2rem;      /* @kind font */
+  --fs-h3:        1.5rem;    /* @kind font */
+  --fs-h4:        1.25rem;   /* @kind font */
+  --fs-lg:        1.125rem;  /* @kind font */
+  --fs-body:      1rem;      /* @kind font */
+  --fs-sm:        0.875rem;  /* @kind font */
+  --fs-xs:        0.75rem;   /* @kind font */
+  --fs-kicker:    0.8125rem; /* @kind font */
+
+  /* ---- Line heights ---- */
+  --lh-tight:     1.02; /* @kind other */
+  --lh-snug:      1.12; /* @kind other */
+  --lh-heading:   1.18; /* @kind other */
+  --lh-body:      1.55; /* @kind other */
+  --lh-relaxed:   1.7;  /* @kind other */
+
+  /* ---- Letter spacing ---- */
+  --ls-display:   -0.03em;  /* @kind other */
+  --ls-tight:     -0.015em; /* @kind other */
+  --ls-normal:    0;        /* @kind other */
+  --ls-kicker:    0.18em;   /* @kind other */
+  --ls-caps:      0.08em;   /* @kind other */
+
+  /* ---- Semantic roles ---- */
+  --type-display-font:   var(--font-display); /* @kind font */
+  --type-display-weight: var(--fw-extra);     /* @kind font */
+  --type-display-ls:     var(--ls-display);   /* @kind other */
+  --type-display-lh:     var(--lh-tight);     /* @kind other */
+
+  --type-heading-font:   var(--font-display); /* @kind font */
+  --type-heading-weight: var(--fw-bold);      /* @kind font */
+
+  --type-body-font:      var(--font-text);    /* @kind font */
+  --type-body-lh:        var(--lh-body);       /* @kind other */
+
+  --type-kicker-font:    var(--font-mono);    /* @kind font */
+  --type-kicker-ls:      var(--ls-kicker);    /* @kind other */
+}
