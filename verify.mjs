@@ -39,7 +39,7 @@ for (const file of ['robots.txt', 'sitemap.xml', '_headers']) {
   check(`${file} published`, ok);
 }
 const sitemap = await readFile(`${OUT}/sitemap.xml`, 'utf8').catch(() => '');
-check('sitemap points at canonical host', sitemap.includes('https://www.fitforwardmiami.com/'));
+check('sitemap points at canonical host', sitemap.includes('https://fitforwardmiami.com/'));
 
 // 5. Metadata a link unfurler or search result needs.
 for (const [label, re] of [

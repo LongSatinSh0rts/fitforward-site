@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.fitforwardmiami.com/sitemap.xml
+Sitemap: https://fitforwardmiami.com/sitemap.xml

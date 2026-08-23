@@ -38,7 +38,7 @@ const STATIC = [
 
 // One page, one canonical URL. The sitemap is generated rather than checked in,
 // so lastmod cannot quietly go stale.
-const SITE_URL = 'https://www.fitforwardmiami.com/';
+const SITE_URL = 'https://fitforwardmiami.com/';
 
 await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT, { recursive: true });
