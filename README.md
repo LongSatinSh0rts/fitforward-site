@@ -44,10 +44,20 @@ To see what a crawler sees, load that with JavaScript disabled in devtools.
 
 ## Deploying
 
-`netlify.toml` sets `command = "npm run build"` and `publish = "dist"`. If the
-site is currently deployed by dragging a folder into Netlify, that has to change
-to a Git-connected build, or the build will keep not running — which is the
-exact failure this repo exists to fix.
+Push to `main`. Netlify builds from this repo and publishes `dist/`, per
+`netlify.toml` (`command = "npm run build"`, `publish = "dist"`).
+
+That indirection is the point. The site previously deployed by dropping a
+folder into Netlify, which never ran a build — which is exactly how it ended up
+serving raw JSX with a browser-side transpiler in front of it. A build that only
+runs when someone remembers to run it will eventually not run.
+
+If a deploy ever has to happen without Git, build locally first (`npm run
+build`, which refuses to emit a broken `dist/`) and deploy that folder — never
+the repo root.
+
+**Verify in a browser after deploying, not with curl.** Both bugs this build
+step exposed produced perfectly valid HTML and a page that did not work.
 
 ## Two things worth knowing before you touch the JSX
 
