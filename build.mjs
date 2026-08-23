@@ -65,10 +65,17 @@ for (const path of STATIC) {
 // 3. Rewrite index.html for the compiled output.
 let html = await readFile('index.html', 'utf8');
 
+// `defer` is load-bearing, not tidiness. Babel-standalone processed text/babel
+// scripts after the document had parsed, so app.jsx ran *after* the inline
+// config blocks lower down the page — which is where window.LUNACAL and
+// window.HUBSPOT are defined. A plain <script src> runs during parsing instead,
+// so the app would render before that config exists and throw on
+// window.LUNACAL.discovery, blanking the page. Deferred scripts run after
+// parsing, in order, which is exactly the timing Babel used to provide.
 for (const file of JSX) {
   const js = file.replace(/\.jsx$/, '.js');
   html = html.split(`<script type="text/babel" src="${file}"></script>`)
-             .join(`<script src="${js}"></script>`);
+             .join(`<script defer src="${js}"></script>`);
 }
 
 // Babel is no longer needed at runtime — that is the whole point.

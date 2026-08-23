@@ -82,12 +82,13 @@ window.matchMedia ??= (query) => ({
   addListener() {}, removeListener() {},
 });
 
-// index.html carries config in inline scripts — window.LUNACAL (booking links)
-// and window.HUBSPOT (form ids) — which the sections read while rendering.
-// They sit below the JSX tags in the document; run them first so the config is
-// there before anything renders. Third-party embed loaders live in the same
-// blocks and are harmless: jsdom fetches nothing, so appending a <script src>
-// to head is a no-op here.
+// Inline scripts first, then the compiled files — which is not a convenience,
+// it is what the browser does. The inline blocks carrying window.LUNACAL and
+// window.HUBSPOT run during parsing; the compiled scripts are deferred and run
+// after it. Getting this backwards is what blanked production once, so the
+// order here has to keep mirroring the `defer` attribute build.mjs emits.
+// Third-party embed loaders share those blocks and are harmless: jsdom fetches
+// nothing, so appending a <script src> to head is a no-op here.
 const INLINE = [...html.matchAll(/<script(?![^>]*\bsrc=)([^>]*)>([\s\S]*?)<\/script>/gi)]
   .filter(([, attrs]) => !/application\/ld\+json/i.test(attrs))
   .map(([, , body]) => body);

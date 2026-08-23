@@ -17,7 +17,17 @@ const babelTags = (html.match(/text\/babel/g) || []).length;
 check('no text/babel script tags', babelTags === 0, `found ${babelTags}`);
 check('no Babel standalone from CDN', !/@babel\/standalone/.test(html));
 
-// 2. Content actually present in the HTML source, not just reachable via JS.
+// 2. Every compiled script must be deferred. Without it they execute during
+//    parsing, ahead of the inline config blocks lower in the document, and the
+//    app throws on window.LUNACAL and renders nothing. This shipped once.
+const compiled = ['tweaks-panel', 'kit', 'Sections', 'Sections2', 'Sections3', 'app'];
+// jsdom's serializer rewrites the bare attribute to defer="", so match either.
+const undeferred = compiled.filter(
+  (n) => !new RegExp(`<script[^>]*\\bdefer(=""|)[^>]*src="${n}\\.js"`).test(html),
+);
+check('compiled scripts are deferred', undeferred.length === 0, `missing defer: ${undeferred.join(', ')}`);
+
+// 2b. Content actually present in the HTML source, not just reachable via JS.
 const root = html.match(/<div id="root">([\s\S]*)<\/div>/);
 const rootLen = root ? root[1].length : 0;
 check('prerendered content in #root', rootLen > 20000, `${(rootLen / 1024).toFixed(1)} KB`);
