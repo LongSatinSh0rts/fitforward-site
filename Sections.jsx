@@ -12,7 +12,7 @@ function SiteHeader({ onBook }) {
       padding: '14px clamp(18px, 5vw, 56px)', background: 'rgba(250,246,241,0.85)', backdropFilter: 'blur(14px)',
       borderBottom: '1.5px solid var(--ff-200)'
     }}>
-      <img src={window.FF_LOGO_BLACK} alt="Fitness Forward by CJR logo" style={{ height: 34 }} />
+      <img src={window.FF_LOGO_BLACK} alt="Fit Forward Miami logo" style={{ height: 34 }} />
       <nav style={{ display: 'flex', gap: 28, alignItems: 'center' }} className="site-nav">
         {links.map(([l, id]) =>
         <a key={l} href={'#' + id} onClick={(e) => { e.preventDefault(); go(id); }} style={{ fontFamily: 'var(--font-text)', fontWeight: 600, fontSize: 15, color: 'var(--text-strong)', textDecoration: 'none', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', minHeight: 44 }}>{l}</a>
@@ -41,24 +41,47 @@ function SiteHero({ onBook, layout, headline }) {
   const centered = false; // left-aligned hero
   const accent = 'var(--accent-pick, var(--ff-grape-600))';
 
+  /* The H1 carries the search query; the brand line keeps the display type and
+     stays the first thing a human actually reads. Swapping which element is the
+     <h1> costs nothing visually and is the strongest on-page ranking signal. */
   const Heading =
-  <h1 className="ff-h ff-bagel" style={{
-    fontFamily: "'Bagel Fat One', cursive", fontWeight: 800,
-    fontSize: 'clamp(48px, 9.4vw, 138px)',
-    lineHeight: 0.94, letterSpacing: '-0.04em', color: 'var(--text-strong)', margin: 0,
-    maxWidth: 'none'
-  }}>
+  <React.Fragment>
+    <h1 style={{
+      fontSize: 'clamp(19px, 2vw, 26px)', fontWeight: 700, lineHeight: 1.25,
+      letterSpacing: '-0.01em', color: 'var(--text-body)', margin: '0 0 14px',
+      maxWidth: 620
+    }}>
+      Personal training in Edgewater, Miami — for the pain that outlasted everything else.
+    </h1>
+    <p className="ff-h ff-bagel" style={{
+      fontFamily: "'Bagel Fat One', cursive", fontWeight: 800,
+      fontSize: 'clamp(48px, 9.4vw, 138px)',
+      lineHeight: 0.94, letterSpacing: '-0.04em', color: 'var(--text-strong)', margin: 0,
+      maxWidth: 'none'
+    }}>
       Go beyond reason.{' '}
       <span style={{ color: accent }}>Kick impossible</span>{' '}
       <span className="ff-highlight">to the curb.</span>
-    </h1>;
+    </p>
+  </React.Fragment>;
 
 
   const Copy =
-  <p style={{ fontSize: 'clamp(17px, 1.5vw, 20px)', lineHeight: 1.55, color: 'var(--text-body)', maxWidth: centered ? 600 : 480, margin: centered ? '0 auto 30px' : '0 0 30px', fontWeight: 500 }}>
+  <React.Fragment>
+    {/* Deliberately plain: this is the passage an AI answer engine lifts whole,
+        so it has to stand on its own with no surrounding context. */}
+    <p style={{ fontSize: 'clamp(16px, 1.4vw, 18px)', lineHeight: 1.6, color: 'var(--text-body)', maxWidth: centered ? 640 : 560, margin: centered ? '18px auto 22px' : '18px 0 22px' }}>
+      <strong>Fit Forward Miami</strong> is a personal training and corrective exercise
+      practice in Edgewater, Miami, led by coach Christopher Rosado. It fuses strength
+      training, nutrition, corrective exercise and recovery into one program, built for
+      people carrying chronic pain or stuck at a plateau. Sessions run at the Miami Strong
+      facility, with outcall across Miami and remote programming anywhere.
+    </p>
+    <p style={{ fontSize: 'clamp(17px, 1.5vw, 20px)', lineHeight: 1.55, color: 'var(--text-body)', maxWidth: centered ? 600 : 480, margin: centered ? '0 auto 30px' : '0 0 30px', fontWeight: 500 }}>
       You are one entity. Train like it. Strength, nutrition and recovery
       engineered into a single blueprint – for the everyday and elite alike.
-    </p>;
+    </p>
+  </React.Fragment>;
 
 
   const Actions =
@@ -86,7 +109,7 @@ function SiteHero({ onBook, layout, headline }) {
 
   return (
     <section style={{ padding: 'clamp(34px, 5vw, 72px) clamp(20px, 5vw, 56px) clamp(44px,5vw,80px)', maxWidth: 1340, margin: '0 auto' }}>
-      <Badge tone="grape" dot style={{ marginBottom: 24 }}>Fitness Forward by CJR · Miami</Badge>
+      <Badge tone="grape" dot style={{ marginBottom: 24 }}>Fit Forward Miami · Edgewater</Badge>
       {Heading}
       <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.1fr) minmax(0,0.9fr)', gap: 'clamp(28px, 4vw, 60px)', alignItems: 'end', marginTop: 'clamp(28px, 3.5vw, 48px)' }}>
         <div>
@@ -105,7 +128,7 @@ function SiteDisciplines() {
   const { Icon, Kicker, Reveal } = window;
   const items = [
   { icon: 'wrench', abbr: 'CES', name: 'Corrective Exercise Specialist', color: 'var(--ff-volt)',
-    text: 'Pain has a source. We go there first – then build the practices that keep it from coming back.' },
+    text: 'Pain has a source. We go there first – posture correction, then the practices that keep it from coming back.' },
   { icon: 'apple', abbr: 'CNC', name: 'Certified Nutritional Counselor', color: 'var(--ff-orchid)',
     text: 'Knowing what to eat was never the problem. Old beliefs run the kitchen. Embodiment as nutritional autonomy.' },
   { icon: 'chevrons-right', triple: true, abbr: 'PES', name: 'Performance Enhancement Specialist', color: 'var(--ff-grape-300)',
@@ -117,7 +140,7 @@ function SiteDisciplines() {
     <section id="method" style={{ background: 'var(--ff-ink)', color: '#fff', padding: 'clamp(48px, 7vw, 96px) clamp(20px, 5vw, 56px)' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto' }}>
         <Kicker color="var(--ff-orchid)">The method</Kicker>
-        <h2 className="ff-h" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: '#fff', fontSize: 'clamp(30px, 4vw, 52px)', letterSpacing: '-0.03em', margin: '14px 0 8px', maxWidth: 760 }}>Four disciplines: One blueprint</h2>
+        <h2 className="ff-h" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, color: '#fff', fontSize: 'clamp(30px, 4vw, 52px)', letterSpacing: '-0.03em', margin: '14px 0 8px', maxWidth: 760 }}>What &ldquo;four disciplines, one blueprint&rdquo; actually means</h2>
         <p style={{ color: 'var(--ff-400)', fontSize: 18, maxWidth: 600, margin: '0 0 44px' }}>The four horsemen of my training philosophy. Each intertwining with another organically. </p>
         <div className="disc-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 18, maxWidth: 820 }}>
           {items.map((it, i) =>
@@ -164,7 +187,7 @@ function SitePrograms({ onBook }) {
       <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 52 }}>
         <div>
           <Kicker>Choose your track</Kicker>
-          <h2 className="ff-h" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(30px, 4vw, 52px)', letterSpacing: '-0.03em', margin: '14px 0 0' }}>Find your forward</h2>
+          <h2 className="ff-h" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(30px, 4vw, 52px)', letterSpacing: '-0.03em', margin: '14px 0 0' }}>Personal training rates in Miami</h2>
         </div>
       </div>
       <Card variant="bordered" padding="lg" className="discovery-card" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 28, flexWrap: 'wrap', marginBottom: 20 }}>

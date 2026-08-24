@@ -34,6 +34,7 @@ const STATIC = [
   'image-slot.js',
   'og-image.jpg',
   'robots.txt',
+  'llms.txt',
 ];
 
 // One page, one canonical URL. The sitemap is generated rather than checked in,

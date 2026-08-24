@@ -24,7 +24,7 @@ const { useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakColor, TweakSlide
   function App() {
     const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
     const { SiteHeader, SiteHero, SiteDisciplines, SitePrograms,
-            SiteCoach, SiteStories, SiteBooking, SiteNewsletter, SiteFooter,
+            SiteCoach, SiteStories, SiteBooking, SiteNewsletter, SiteFooter, SiteChronicPain, SiteFAQ,
             SiteMerch } = window;
 
     React.useEffect(() => {
@@ -43,9 +43,11 @@ const { useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakColor, TweakSlide
         <SiteHeader onBook={book} />
         <SiteHero onBook={book} layout={t.heroLayout} />
         <SiteDisciplines />
+        <SiteChronicPain />
         <SitePrograms onBook={book} />
         <SiteCoach />
         <SiteStories />
+        <SiteFAQ />
         <SiteBooking />
         <SiteNewsletter />
         <SiteMerch />

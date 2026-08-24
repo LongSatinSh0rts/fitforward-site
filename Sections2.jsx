@@ -7,7 +7,7 @@ function SiteCoach() {
       <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0,0.9fr) minmax(0,1.1fr)', gap: 'clamp(28px,4vw,64px)', alignItems: 'center' }} className="coach-grid">
         <div style={{ position: 'relative' }}>
           <div style={{ aspectRatio: '1/1', borderRadius: 'var(--radius-2xl)', border: '2.5px solid var(--ff-ink)', boxShadow: 'var(--shadow-hard-lg)', overflow: 'hidden', position: 'relative' }}>
-            <img id="coach-photo" src="assets/coach-poster.jpg" alt="Coach Christopher Rosado, founder of Fitness Forward"
+            <img id="coach-photo" src="assets/coach-poster.jpg" alt="Coach Christopher Rosado, founder of Fit Forward Miami"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block',
                 objectPosition: '50% var(--coach-y, 16%)',
                 transform: 'scale(var(--coach-zoom, 1.25))', transformOrigin: '50% var(--coach-y, 16%)' }} />
@@ -17,7 +17,7 @@ function SiteCoach() {
           <Kicker color="var(--ff-grape-600)">Meet your coach</Kicker>
           <h2 className="ff-h" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(30px,4vw,52px)', letterSpacing: '-0.03em', margin: '14px 0 18px' }}>Christopher Rosado</h2>
           <p style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--text-body)', maxWidth: 560, margin: '0 0 18px' }}>
-            I built Fitness Forward to train the whole entity. Education, culinary work, years of coaching –
+            I built Fit Forward Miami to train the whole entity. Education, culinary work, years of coaching –
             and an element of play – aimed at chronic pain and the plateaus that outlast it.
           </p>
           <p style={{ fontSize: 18, lineHeight: 1.6, color: 'var(--text-body)', maxWidth: 560, margin: 0 }}>
@@ -62,6 +62,22 @@ function SiteStories() {
     <section id="stories" style={{ background: 'var(--ff-ink)', color: '#fff', padding: 'clamp(48px,7vw,96px) clamp(20px,5vw,56px)' }}>
       <div style={{ maxWidth: 980, margin: '0 auto', textAlign: 'center' }} aria-live="polite" aria-atomic="false">
         <Kicker color="var(--ff-volt)">Results</Kicker>
+        <h2 className="ff-h" style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: 'clamp(28px, 3.6vw, 46px)', letterSpacing: '-0.03em', margin: '14px 0 10px', color: '#fff' }}>
+          What clients say
+        </h2>
+        {/* This rating must stay visible. index.html declares aggregateRating in
+            JSON-LD, and Google requires a rating in structured data to also be
+            readable by a human on the same page. Removing this line without
+            removing the schema exposes the site to a manual action. */}
+        <a href={GOOGLE_REVIEWS} target="_blank" rel="noopener noreferrer" style={{
+          display: 'inline-flex', alignItems: 'center', gap: 10, textDecoration: 'none',
+          fontFamily: 'var(--font-mono)', fontSize: 14, fontWeight: 700, color: '#fff',
+          border: '2px solid var(--ff-volt)', borderRadius: 'var(--radius-pill)',
+          padding: '8px 16px', marginBottom: 6, minHeight: 44,
+        }}>
+          <span style={{ color: 'var(--ff-volt)', fontSize: 16, letterSpacing: '2px' }}>★★★★★</span>
+          <span>5.0 — 17 Google reviews</span>
+        </a>
         <Icon name="quote" size={40} color="var(--ff-orchid)" style={{ marginTop: 18 }} />
         <p style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 'clamp(22px,2.8vw,34px)', lineHeight: 1.32, letterSpacing: '-0.02em', color: '#fff', margin: '14px 0 28px', minHeight: '4.2em' }}>
           {t.lead}
@@ -119,10 +135,10 @@ function SiteBooking() {
     <section id="booking" style={{ padding: 'clamp(40px, 6vw, 80px) clamp(20px, 5vw, 56px)', maxWidth: 1280, margin: '0 auto' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }} className="book-extras">
         <div style={{ borderRadius: 'var(--radius-xl)', overflow: 'hidden', border: '2.5px solid var(--ff-ink)', boxShadow: 'var(--shadow-hard)', minHeight: 240 }}>
-          <iframe title="Fitness Forward by CJR – Miami" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.0713324016332!2d-80.18732403045723!3d25.794159206064837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b57bd94b3c2f%3A0x5573275c15436894!2sFitness%20Forward%20by%20CJR!5e0!3m2!1sen!2sus!4v1775162596040!5m2!1sen!2sus" style={{ width: '100%', height: '100%', minHeight: 240, border: 0, display: 'block', filter: 'grayscale(0.2) contrast(1.05)' }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title="Fit Forward Miami – Edgewater" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.0713324016332!2d-80.18732403045723!3d25.794159206064837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b57bd94b3c2f%3A0x5573275c15436894!2sFitness%20Forward%20by%20CJR!5e0!3m2!1sen!2sus!4v1775162596040!5m2!1sen!2sus" style={{ width: '100%', height: '100%', minHeight: 240, border: 0, display: 'block', filter: 'grayscale(0.2) contrast(1.05)' }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div style={{ background: 'var(--ff-volt)', border: '2.5px solid var(--ff-ink)', borderRadius: 'var(--radius-xl)', boxShadow: 'var(--shadow-hard)', padding: 'clamp(24px,3vw,34px)', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 16 }}>
-          {[['map-pin', 'Fitness Forward by CJR', 'Miami, Florida'], ['clock', 'Mon–Sat', 'Early mornings & evenings']].map(([ic, a, b]) =>
+          {[['map-pin', 'Fit Forward Miami', '1830 N Bayshore Dr, Miami FL 33132'], ['clock', 'Mon–Sat', 'Early mornings & evenings']].map(([ic, a, b]) =>
           <div key={a} style={{ display: 'flex', gap: 13, alignItems: 'center' }}>
               <span style={{ width: 42, height: 42, borderRadius: 12, background: 'var(--ff-ink)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flex: 'none' }}>
                 <Icon name={ic} size={20} color="var(--ff-volt)" />
@@ -216,7 +232,7 @@ function SiteFooter({ onBook }) {
     { label: '8-session combo', to: 'programs' },
     { label: '12-session combo', to: 'programs' }] },
 
-  { h: 'Fitness Forward', items: [
+  { h: 'Fit Forward Miami', items: [
     { label: 'The method', to: 'method' },
     { label: 'Meet Christopher', to: 'coach' },
     { label: 'Stories', to: 'stories' },
@@ -225,15 +241,52 @@ function SiteFooter({ onBook }) {
   { h: 'Connect', items: [
     { label: 'Instagram', href: 'https://www.instagram.com/fitnessforwardcjr/' },
     { label: 'Email', href: 'mailto:Christopher@fitforwardmiami.com' },
-    { label: 'Call or text', reveal: true, phone: '347-400-2088', href: 'tel:+13474002088' }] }];
+    { label: 'Call or text', reveal: true, phone: '786-475-5778', href: 'tel:+17864755778' }] }];
   const [showPhone, setShowPhone] = React.useState(false);
 
   return (
     <footer style={{ background: 'var(--ff-ink)', color: '#fff', padding: 'clamp(48px,6vw,80px) clamp(20px,5vw,56px) 40px' }}>
       <div style={{ maxWidth: 1280, margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0,1.4fr) repeat(3, minmax(0,1fr))', gap: 36 }} className="footer-grid">
         <div>
-          <img src={window.FF_LOGO_WHITE} alt="Fitness Forward by CJR logo" style={{ height: 44, marginBottom: 18 }} />
+          <img src={window.FF_LOGO_WHITE} alt="Fit Forward Miami logo" style={{ height: 44, marginBottom: 18 }} />
           <p style={{ color: 'var(--ff-400)', fontSize: 14, maxWidth: 280, lineHeight: 1.5 }}>Go beyond reason. Kick impossible to the curb. Human performance coaching in Miami – trained whole.</p>
+
+          {/* NAP — name, address, phone. Search engines and AI systems cross-check
+              this against every other listing, so it has to match the Google
+              Business Profile and the JSON-LD character for character. Plain
+              visible text on purpose: a phone behind a click is a phone a crawler
+              never sees. */}
+          <address style={{ fontStyle: 'normal', color: 'var(--ff-300)', fontSize: 13.5, lineHeight: 1.7, marginTop: 22, maxWidth: 280 }}>
+            <div style={{ color: '#fff', fontWeight: 700, fontSize: 14.5, marginBottom: 4 }}>Fit Forward Miami</div>
+            1830 N Bayshore Dr, Floor 1<br />
+            Quantum on the Bay Condominium<br />
+            Miami, FL 33132<br />
+            <a href="tel:+17864755778" style={{ color: 'var(--ff-volt)', textDecoration: 'none', fontFamily: 'var(--font-mono)' }}>(786) 475-5778</a><br />
+            <a href="mailto:Christopher@fitforwardmiami.com" style={{ color: 'var(--ff-300)', textDecoration: 'none' }}>Christopher@fitforwardmiami.com</a>
+          </address>
+
+          {/* Split shifts, exactly as the Google profile lists them — rounding
+              these to "Mon–Sat, early mornings & evenings" is what put different
+              hours on the site than on Maps. */}
+          <div style={{ marginTop: 22, maxWidth: 300 }}>
+            <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ff-orchid)', marginBottom: 10 }}>Hours</div>
+            <table style={{ borderCollapse: 'collapse', color: 'var(--ff-300)', fontSize: 13, lineHeight: 1.6 }}>
+              <tbody>
+                {[['Mon', '8:00 AM – 1:00 PM · 4:00 – 7:00 PM'],
+                  ['Tue', '7:00 AM – 12:00 PM · 4:00 – 7:00 PM'],
+                  ['Wed', '3:00 – 7:00 PM'],
+                  ['Thu', '7:00 AM – 12:00 PM · 4:00 – 7:00 PM'],
+                  ['Fri', '6:00 AM – 2:00 PM'],
+                  ['Sat', '9:00 AM – 1:00 PM'],
+                  ['Sun', 'Closed']].map(([d, h]) => (
+                    <tr key={d}>
+                      <th scope="row" style={{ textAlign: 'left', fontWeight: 700, color: '#fff', paddingRight: 12, verticalAlign: 'top', fontFamily: 'var(--font-mono)', fontSize: 12 }}>{d}</th>
+                      <td style={{ whiteSpace: 'nowrap' }}>{h}</td>
+                    </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
         {cols.map((c) =>
         <div key={c.h}>
@@ -260,7 +313,7 @@ function SiteFooter({ onBook }) {
         )}
       </div>
       <div style={{ maxWidth: 1280, margin: '40px auto 0', paddingTop: 22, borderTop: '1.5px solid var(--ff-700)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
-        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--ff-500)' }}>© 2026 Fitness Forward by CJR · Miami</span>
+        <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--ff-500)' }}>© 2026 Fit Forward Miami · CJR Fitness Forward LLC</span>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--ff-500)' }}>Built forward.</span>
       </div>
     </footer>);
