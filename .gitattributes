@@ -1,0 +1,13 @@
+# Normalize line endings. Without this, committing from Windows warns on every
+# text file, and the build runs on Netlify's Linux images where CRLF in a shell
+# script or a _headers file is a real problem rather than a cosmetic one.
+* text=auto eol=lf
+
+# Binary — never touch these.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
